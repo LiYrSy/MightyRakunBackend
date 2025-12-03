@@ -19,7 +19,6 @@ content-type: application/json
     "description": "Boljshoj Hren",
     "color": "#00FF00",
     "isCompleted": true
-}"isCompleted": false
 }
 
 ###

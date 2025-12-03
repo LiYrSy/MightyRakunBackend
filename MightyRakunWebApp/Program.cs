@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 var app = builder.Build();
 
 // TODO: use redirect to make urls prettier on client side
@@ -32,7 +31,7 @@ app.MapGet("/todos", () => habits);
 // // get one item
 app.MapGet("/todos/{id}", Results<Ok <Habit>, NotFound> (string id) =>
 {
-    var targetTodo = habits.SingleOrDefault(t => id == t.Id);
+    var targetTodo = habits.SingleOrDefault(t => id == t.id);
      return targetTodo is null
      ? TypedResults.NotFound()
      : TypedResults.Ok(targetTodo);
@@ -40,9 +39,16 @@ app.MapGet("/todos/{id}", Results<Ok <Habit>, NotFound> (string id) =>
 
 app.MapDelete("/todos/{id}", (string id) =>
 {
-    habits.RemoveAll(t => id == t.Id);
+    habits.RemoveAll(t => id == t.id);
 return TypedResults.NoContent();
 });
 
 app.Run();
 
+public record Habit(string id,
+                    string icon,
+                    string title,
+                    string description,
+                    string color,
+                    bool isCompleted
+            ); 
