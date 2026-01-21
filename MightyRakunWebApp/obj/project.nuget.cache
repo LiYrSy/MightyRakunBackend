@@ -1,8 +1,51 @@
 {
   "version": 2,
-  "dgSpecHash": "ytl3whS/1zo=",
+  "dgSpecHash": "Y6c6sXZDMeA=",
   "success": true,
   "projectFilePath": "/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/MightyRakunWebApp.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore/2.1.14/microsoft.entityframeworkcore.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.abstractions/2.1.14/microsoft.entityframeworkcore.abstractions.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.analyzers/2.1.14/microsoft.entityframeworkcore.analyzers.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.design/2.1.14/microsoft.entityframeworkcore.design.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.relational/2.1.14/microsoft.entityframeworkcore.relational.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.sqlserver/2.1.14/microsoft.entityframeworkcore.sqlserver.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.entityframeworkcore.tools/2.1.14/microsoft.entityframeworkcore.tools.2.1.14.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/microsoft.netcore.platforms/1.0.1/microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/netstandard.library/1.6.0/netstandard.library.1.6.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/remotion.linq/2.2.0/remotion.linq.2.2.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.4.0/runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/system.data.sqlclient/4.5.1/system.data.sqlclient.4.5.1.nupkg.sha512",
+    "/Users/enotjao/.nuget/packages/system.interactive.async/3.1.1/system.interactive.async.3.1.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'System.Data.SqlClient' 4.5.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
+      "projectPath": "/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/MightyRakunWebApp.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/MightyRakunWebApp.csproj",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Data.SqlClient' 4.5.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "projectPath": "/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/MightyRakunWebApp.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/MightyRakunWebApp.csproj",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

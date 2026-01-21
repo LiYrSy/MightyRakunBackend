@@ -1,0 +1,15 @@
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.deps.json
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.runtimeconfig.json
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/bin/Debug/net10.0/ConsoleApp1.pdb
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.AssemblyInfoInputs.cache
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.AssemblyInfo.cs
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.sourcelink.json
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/refint/ConsoleApp1.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.pdb
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ConsoleApp1.genruntimeconfig.cache
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/ConsoleApp1/obj/Debug/net10.0/ref/ConsoleApp1.dll

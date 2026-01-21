@@ -13,9 +13,9 @@ POST http://localhost:5088/todos
 content-type: application/json
 
 {
-    "id": "2",
+    "id": "3",
     "icon": "🍆",
-    "title": "Hren",
+    "title": "hrenishe",
     "description": "Boljshoj Hren",
     "color": "#00FF00",
     "isCompleted": true
