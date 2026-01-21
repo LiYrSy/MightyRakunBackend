@@ -27,3 +27,4 @@
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/obj/Debug/net10.0/MightyRakunWebApp.pdb
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/obj/Debug/net10.0/MightyRakunWebApp.genruntimeconfig.cache
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/obj/Debug/net10.0/ref/MightyRakunWebApp.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/obj/Debug/net10.0/MightyRakunWebApp.csproj.AssemblyReference.cache
