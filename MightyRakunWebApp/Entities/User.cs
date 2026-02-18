@@ -1,10 +1,12 @@
 namespace MightyRakunWebApp.Entities;
 public class User
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     public string Username { get; set; }
     public string Email { get; set; }
-    public byte[] PasswordHash { get; set; } 
-    public virtual List<UserHabit> UserHabits { get; set; } = new();
-
+    public string PasswordHash { get; set; } 
+    public virtual List<UserHabit> UserHabits { get; set; } = [];
 }
+
+public record UserResponse(Guid Id, string Username, string Email);
+public record CreateUserRequest(string Username, string Email, string Password);

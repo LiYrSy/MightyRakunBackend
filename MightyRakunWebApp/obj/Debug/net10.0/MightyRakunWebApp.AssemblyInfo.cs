@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MightyRakunWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30cdfec7ee9c38e79c84b692c543d6c4afba1164")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd1e1d594279999e82682279bf2c6d931cdd896e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MightyRakunWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MightyRakunWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

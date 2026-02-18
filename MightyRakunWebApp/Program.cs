@@ -1,6 +1,10 @@
+using EntityFramework.Exceptions.SqlServer;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
+using MightyRakunWebApp.Endpoints.Users;
 using MightyRakunWebApp.Entities;
+using MightyRakunWebApp.Services;
+using Scalar.AspNetCore;
 
 namespace MightyRakunWebApp
 {
@@ -8,33 +12,20 @@ namespace MightyRakunWebApp
     {
         static async Task Main(string[] args)
         {
-            // var dbContext = new AppDbContext();
-            // var habits = new List<UserHabit>
-            // {
-            //    new() { UserId = 2, HabitId = 2, IsCompleted = false },
-            //    new() { UserId = 2, HabitId = 1, IsCompleted = false }
-
-            // };
-            // var newUser = new User
-            // {
-            //     Id = 2,
-            //     Email = "sobakis@puhliy.com",
-            //     Username = "Sobakis",
-            //     UserHabits = habits,
-            // };
-
-            // var newHabit = new Habit
-            // {
-            //     Icon = "🚰",
-            //     Title = "Drink water",
-            //     Description = "Pour a glass of water",
-            //     Color = "#427BF7",
-            // };
-
             var builder = WebApplication.CreateBuilder(args);
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(connectionString).UseExceptionProcessor());
+            builder.Services.AddOpenApi();
 
+            builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
+
+            builder.Services.AddScoped<IUserService, UserService>();
             var app = builder.Build();
+            app.MapOpenApi();
+            app.MapScalarApiReference();
 
+            CreateUserEndpoint.AddUser(app);
             app.Run();
         }
     }

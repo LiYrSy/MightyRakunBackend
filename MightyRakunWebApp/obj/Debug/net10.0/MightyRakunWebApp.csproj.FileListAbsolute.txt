@@ -154,3 +154,9 @@
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
 /Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/Scalar.AspNetCore.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/Microsoft.OpenApi.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/obj/Debug/net10.0/MightyRakunWebApp.MvcApplicationPartsAssemblyInfo.cs
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/EntityFramework.Exceptions.Common.dll
+/Users/enotjao/Desktop/projects/git/MightyRakunBackend/MightyRakunWebApp/bin/Debug/net10.0/EntityFramework.Exceptions.SqlServer.dll

@@ -4,19 +4,17 @@ namespace MightyRakunWebApp.Entities;
 
 public class AppDbContext : DbContext
 {
-  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-  {
-    var connectionString =
-    "Server=localhost,55000;Database=AppDb;User Id=sa;Password=paanssy1234$;TrustServerCertificate=True;";
-    optionsBuilder.UseSqlServer(connectionString);
-    // .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
-    base.OnConfiguring(optionsBuilder);
-  }
-
+  public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+  
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
     base.OnModelCreating(modelBuilder);
 
+    modelBuilder.Entity<User>(e =>
+    {
+        e.HasIndex(u => u.Email).IsUnique();
+        e.HasIndex(u => u.Username).IsUnique();
+    });
     modelBuilder.Entity<UserHabit>()
         .HasKey(uh => new { uh.UserId, uh.HabitId });
 
