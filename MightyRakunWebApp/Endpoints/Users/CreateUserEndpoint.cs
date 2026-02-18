@@ -1,20 +1,17 @@
-
 using Microsoft.EntityFrameworkCore;
 using MightyRakunWebApp.Entities;
+using MightyRakunWebApp.Services;
+
 namespace MightyRakunWebApp.Endpoints.Users;
 
-class CreateUserEndpoint
+public static class CreateUserEndpoint
 {
-    static IResult CreateUser(User newUser)
+    public static void AddUser(WebApplication app)
     {
-        AddUserToDB(newUser);
-        return TypedResults.Created("/users/{id}");
-    }
-
-    private static void AddUserToDB(User newUser)
-    {
-        AppDbContext dbContext = new();
-        dbContext.Users.Add(newUser);
-        dbContext.SaveChanges();
+        app.MapPost("/users", async (CreateUserRequest req, IUserService svc, CancellationToken ct) =>
+        {
+            var user = await svc.CreateAsync(req.Username, req.Email, req.Password, ct);
+            return Results.Created($"/users/", user);
+        }).WithTags("Users");
     }
 }

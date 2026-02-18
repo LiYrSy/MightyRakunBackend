@@ -4,7 +4,6 @@ namespace MightyRakunWebApp.Endpoints.Users;
 
 class DeleteUserEndpoint
 {
-    private AppDbContext dbContext = new AppDbContext();
     private static void DeleteUser(AppDbContext dbContext, User user)
     {
         var userToDelete = dbContext.Users.First(u => u.Id == user.Id);

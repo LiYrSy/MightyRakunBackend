@@ -4,7 +4,6 @@ namespace MightyRakunWebApp.Endpoints.Users;
 
 class GetUsersEndpoint
 {
-     private AppDbContext dbContext = new AppDbContext();
        private static async Task GetUsers(AppDbContext dbContext)
         {
             var users = await dbContext.Users

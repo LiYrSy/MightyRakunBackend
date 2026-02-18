@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace MightyRakunWebApp.Migrations
 {
     /// <inheritdoc />
-    public partial class AddUser : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,10 +31,10 @@ namespace MightyRakunWebApp.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,24 +42,24 @@ namespace MightyRakunWebApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserHabit",
+                name: "UserHabits",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     HabitId = table.Column<int>(type: "int", nullable: false),
                     IsCompleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserHabit", x => new { x.UserId, x.HabitId });
+                    table.PrimaryKey("PK_UserHabits", x => new { x.UserId, x.HabitId });
                     table.ForeignKey(
-                        name: "FK_UserHabit_Habits_HabitId",
+                        name: "FK_UserHabits_Habits_HabitId",
                         column: x => x.HabitId,
                         principalTable: "Habits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UserHabit_Users_UserId",
+                        name: "FK_UserHabits_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -66,16 +67,28 @@ namespace MightyRakunWebApp.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserHabit_HabitId",
-                table: "UserHabit",
+                name: "IX_UserHabits_HabitId",
+                table: "UserHabits",
                 column: "HabitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Username",
+                table: "Users",
+                column: "Username",
+                unique: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "UserHabit");
+                name: "UserHabits");
 
             migrationBuilder.DropTable(
                 name: "Habits");

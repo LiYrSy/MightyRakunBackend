@@ -1,12 +1,13 @@
+using EntityFramework.Exceptions.Common;
+
 namespace MightyRakunWebApp.Services;
 
 using MightyRakunWebApp.Entities;
 
-using Microsoft.EntityFrameworkCore;
-
-public class UserService(AppDbContext db, IPasswordHasher passwordHasher) : IUserService
+public class UserService(AppDbContext dbContext, IPasswordHasher passwordHasher) : IUserService
 {
-    public async Task<UserResponse> CreateAsync(string username, string email, string password, CancellationToken cancellationToken)
+    public async Task<IResult> CreateAsync(string username, string email, string password,
+        CancellationToken cancellationToken)
     {
         var user = new User
         {
@@ -16,8 +17,15 @@ public class UserService(AppDbContext db, IPasswordHasher passwordHasher) : IUse
             PasswordHash = passwordHasher.Hash(password)
         };
 
-        db.Users.Add(user);
-        await db.SaveChangesAsync(cancellationToken);
-        return new UserResponse(user.Id, user.Username, user.Email);
+        try
+        {
+            dbContext.Users.Add(user);
+            await dbContext.SaveChangesAsync(cancellationToken);
+            return Results.Created();
+        }
+        catch (UniqueConstraintException)
+        {
+            return Results.Conflict("Email or Username is already taken.");
+        }
     }
 }

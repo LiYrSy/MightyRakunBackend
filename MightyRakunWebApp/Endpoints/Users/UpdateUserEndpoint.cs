@@ -6,7 +6,6 @@ namespace MightyRakunWebApp.Endpoints.Users;
 
 class UpdateUserEndpoint
 {
-    private AppDbContext dbContext = new AppDbContext();
     private static void UpdateUser(AppDbContext dbContext, User user)
     {
         var userToUpdate = dbContext.Users.First(u => u.Id == user.Id);
